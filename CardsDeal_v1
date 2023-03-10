@@ -25,8 +25,10 @@ public class Main {
 		// часть 2.1 - ввод с консоли команды start N C
 		for(;;){
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Введите консольную команду с количеством карт и игроков");   
-            
+			System.out.println("start N C  - команда для ввода с клавиатуры количества раздаваемых карт (N) для некоторого количества игроков (C)");
+			System.out.println("start N C  - команда раздает (генерирует) случайные карты в количестве N у C игроков");
+            System.out.println("get-cards C  - команда для ввода с клавиатуры номера игрока (C)");
+            System.out.println("get-cards C  - команда показывает карты игрока с номером С");
             
  
 				start1 = sc.next();
@@ -57,7 +59,7 @@ public class Main {
  		// часть 2.2- ввод с консоли команды get-cards C
 		for(;;){
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Введите консольную команду для выбора номера игрока ");   
+			//System.out.println();   
  
 			
 				start2 = sc.next();
@@ -100,7 +102,7 @@ public class Main {
 			deck[i] = temp;
 		}
  
-		// часть 5 - вывод на экран игрока с картами
+		// часть 5 - перетасованная колода выводится на экран
 			System.out.println(numberPlayer + " " + deck[numberPlayer]);
 			
 	}	
