@@ -8,8 +8,8 @@ public class Main {
 		int cardsPerPlayer = 0;
 		int players = 0;
 		int numberPlayer = 0 ;
-		String start1 = "start";
-		String start2 = "get-cards";
+		String start1 = "";
+		String start2 = "";
  
 		String[] suits = {
 				"R", "G", "B", "W"
@@ -30,11 +30,14 @@ public class Main {
             System.out.println("get-cards C  - команда для ввода с клавиатуры номера игрока (C)");
             System.out.println("get-cards C  - команда показывает карты игрока с номером С");
             
- 
-				start1 = sc.next();
-				cardsPerPlayer = sc.nextInt();
-				players = sc.nextInt();
-				if(cardsPerPlayer * players <= n){
+            start1 = sc.next();
+            cardsPerPlayer = sc.nextInt();
+			players = sc.nextInt();
+            
+            if(start1.equals("start")){
+                
+			    
+            	if(cardsPerPlayer * players <= n){
 					break;
 				} else { 
 					if (players ==0){
@@ -50,20 +53,20 @@ public class Main {
 						
 						System.out.println("Слишком много игроков!");
 					}
-				}     	
- 
-			
-			
+				}
+            } else{
+				System.out.println("Вы ввели неверную команду!");
+            }
 		}
  
  		// часть 2.2- ввод с консоли команды get-cards C
 		for(;;){
 			Scanner sc = new Scanner(System.in);
-			//System.out.println();   
+			start2 = sc.next(); 
+			numberPlayer = sc.nextInt();
  
-			
-				start2 = sc.next();
-				numberPlayer = sc.nextInt();
+			if(start2.equals("get-cards")){
+			    
 				if(numberPlayer <= players){
 					break;
 				} else { 
@@ -81,7 +84,9 @@ public class Main {
 						System.out.println("Номер игрока больше чем участников!");
 					}
 				}     	
- 
+			} else{
+				System.out.println("Вы ввели неверную команду гет!");
+            }
 			
 		}
 	
