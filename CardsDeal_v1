@@ -100,7 +100,7 @@ public class Main {
 			deck[i] = temp;
 		}
  
-		// часть 5 - перетасованная колода выводится на экран
+		// часть 5 - вывод на экран игрока с картами
 			System.out.println(numberPlayer + " " + deck[numberPlayer]);
 			
 	}	
